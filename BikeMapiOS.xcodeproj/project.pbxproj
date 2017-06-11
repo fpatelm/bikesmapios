@@ -487,6 +487,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D915B20B8A8773B0D372B4C2 /* Pods-BikeMapiOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HK8D4ZUZZ7;
 				INFOPLIST_FILE = BikeMapiOS/Info.plist;
@@ -501,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E12013B3E0E69E80B372C9D0 /* Pods-BikeMapiOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HK8D4ZUZZ7;
 				INFOPLIST_FILE = BikeMapiOS/Info.plist;

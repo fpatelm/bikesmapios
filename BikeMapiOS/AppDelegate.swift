@@ -14,7 +14,7 @@ import AlamofireObjectMapper
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var item :[String]? = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -30,7 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            // urlRequest.addValue("apiKey", forHTTPHeaderField: "38440d36615d46c21c37e5e4cfb487f6a17c9e3c")
          
             //urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
-            
+            let def = UserDefaults.standard
+          
             Alamofire.request(urlRequest).responseArray( keyPath: "stationBeanList",completionHandler: { (response: DataResponse<[ContractResponse]>) in
                 let forecastArray = response.result.value
          
@@ -38,18 +39,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(response.result.error)
                 if let forecastArray = forecastArray {
                     for forecast in forecastArray {
-                        print(forecast.name ?? "")
-                        
+                       // print(forecast.name ?? "")
+                        self.item?.append(forecast.name!)
+                     
                         
                     }
+                    
+                    for uu in self.item! {
+                       print(uu ?? "")
+                    }
+                    
+                    def.setValue(self.item, forKey: "ListStations")
+                  
                 }
             })
-                
-            
+
+  
             
         }
-        
-        return true
+         return true
+  
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
