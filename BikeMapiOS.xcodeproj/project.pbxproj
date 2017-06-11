@@ -12,6 +12,7 @@
 		3BA5D6C81EE3576100963138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA5D6C61EE3576100963138 /* Main.storyboard */; };
 		3BA5D6CA1EE3576100963138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA5D6C91EE3576100963138 /* Assets.xcassets */; };
 		3BA5D6CD1EE3576100963138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA5D6CB1EE3576100963138 /* LaunchScreen.storyboard */; };
+		3BB4EC001EED79DC005A0199 /* ContractReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4EBFF1EED79DC005A0199 /* ContractReply.swift */; };
 		CCF09CE00CB66D99EBC3D374 /* Pods_BikeMapiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC018D125EF6B46B4FAE317 /* Pods_BikeMapiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		3BA5D6CE1EE3576100963138 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA5D6D31EE3576100963138 /* BikeMapiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeMapiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA5D6DE1EE3576100963138 /* BikeMapiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BikeMapiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB4EBFF1EED79DC005A0199 /* ContractReply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractReply.swift; sourceTree = "<group>"; };
 		7FC018D125EF6B46B4FAE317 /* Pods_BikeMapiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeMapiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D915B20B8A8773B0D372B4C2 /* Pods-BikeMapiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeMapiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeMapiOS/Pods-BikeMapiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E12013B3E0E69E80B372C9D0 /* Pods-BikeMapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeMapiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeMapiOS/Pods-BikeMapiOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		3BA5D6B61EE3576100963138 = {
 			isa = PBXGroup;
 			children = (
+				3BB4EBFE1EED79B6005A0199 /* Model */,
 				3BA5D6C11EE3576100963138 /* BikeMapiOS */,
 				3BA5D6C01EE3576100963138 /* Products */,
 				4A36EAC96F4175460342CEB5 /* Pods */,
@@ -106,6 +109,14 @@
 				3BA5D6CE1EE3576100963138 /* Info.plist */,
 			);
 			path = BikeMapiOS;
+			sourceTree = "<group>";
+		};
+		3BB4EBFE1EED79B6005A0199 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BB4EBFF1EED79DC005A0199 /* ContractReply.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		4A36EAC96F4175460342CEB5 /* Pods */ = {
@@ -326,6 +337,7 @@
 			files = (
 				3BA5D6C51EE3576100963138 /* ViewController.swift in Sources */,
 				3BA5D6C31EE3576100963138 /* AppDelegate.swift in Sources */,
+				3BB4EC001EED79DC005A0199 /* ContractReply.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireObjectMapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,18 +20,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         // get the default headers
         
+        // v
         
-        if let url = URL(string: "http://services.groupkt.com/country/get/all") {
+        
+        if let url = URL(string: "https://feeds.citibikenyc.com/stations/stations.json") {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
             
-            urlRequest.addValue("apiKey", forHTTPHeaderField: "38440d36615d46c21c37e5e4cfb487f6a17c9e3c")
+           // urlRequest.addValue("apiKey", forHTTPHeaderField: "38440d36615d46c21c37e5e4cfb487f6a17c9e3c")
+         
             //urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
             
-            Alamofire.request(urlRequest)
-                .responseJSON { response in
-                    debugPrint(response)
-            }
+            Alamofire.request(urlRequest).responseArray( keyPath: "stationBeanList",completionHandler: { (response: DataResponse<[ContractResponse]>) in
+                let forecastArray = response.result.value
+         
+                print(response.request)
+                print(response.result.error)
+                if let forecastArray = forecastArray {
+                    for forecast in forecastArray {
+                        print(forecast.name ?? "")
+                        
+                        
+                    }
+                }
+            })
+                
+            
+            
         }
         
         return true
