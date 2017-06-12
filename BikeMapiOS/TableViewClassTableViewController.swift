@@ -38,7 +38,7 @@ class TableViewClassTableViewController: UITableViewController {
             // urlRequest.addValue("apiKey", forHTTPHeaderField: "38440d36615d46c21c37e5e4cfb487f6a17c9e3c")
             
             //urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
-           // let def = UserDefaults.standard
+         
             
             Alamofire.request(urlRequest).responseArray( keyPath: "stationBeanList",completionHandler: { (response: DataResponse<[ContractResponse]>) in
                 let forecastArray = response.result.value
@@ -50,7 +50,6 @@ class TableViewClassTableViewController: UITableViewController {
                         print(forecast.name ?? "")
                         self.items.append(forecast.name!)
                         
-                        
                     }
                     
                     for uu in self.items {
@@ -58,8 +57,7 @@ class TableViewClassTableViewController: UITableViewController {
                     }
                     //reload the data
                     self.tableView.reloadData()
-                    
-                   // def.setValue(self.item, forKey: "ListStations")
+                   
                     
                 }
             })
