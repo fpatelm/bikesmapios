@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3BA5D6C31EE3576100963138 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA5D6C21EE3576100963138 /* AppDelegate.swift */; };
-		3BA5D6C51EE3576100963138 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA5D6C41EE3576100963138 /* ViewController.swift */; };
 		3BA5D6C81EE3576100963138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA5D6C61EE3576100963138 /* Main.storyboard */; };
 		3BA5D6CA1EE3576100963138 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA5D6C91EE3576100963138 /* Assets.xcassets */; };
 		3BA5D6CD1EE3576100963138 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA5D6CB1EE3576100963138 /* LaunchScreen.storyboard */; };
 		3BB4EC001EED79DC005A0199 /* ContractReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB4EBFF1EED79DC005A0199 /* ContractReply.swift */; };
 		CCF09CE00CB66D99EBC3D374 /* Pods_BikeMapiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC018D125EF6B46B4FAE317 /* Pods_BikeMapiOS.framework */; };
+		F7D94CE71EEEB11E00D171FB /* TableViewClassTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D94CE61EEEB11E00D171FB /* TableViewClassTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 		3B71BEDE1EED6BE200038D83 /* BikeMapiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BikeMapiOS.entitlements; sourceTree = "<group>"; };
 		3BA5D6BF1EE3576100963138 /* BikeMapiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BikeMapiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA5D6C21EE3576100963138 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3BA5D6C41EE3576100963138 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3BA5D6C71EE3576100963138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3BA5D6C91EE3576100963138 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BA5D6CC1EE3576100963138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		7FC018D125EF6B46B4FAE317 /* Pods_BikeMapiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BikeMapiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D915B20B8A8773B0D372B4C2 /* Pods-BikeMapiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeMapiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeMapiOS/Pods-BikeMapiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E12013B3E0E69E80B372C9D0 /* Pods-BikeMapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeMapiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeMapiOS/Pods-BikeMapiOS.release.xcconfig"; sourceTree = "<group>"; };
+		F7D94CE61EEEB11E00D171FB /* TableViewClassTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewClassTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +102,11 @@
 			children = (
 				3B71BEDE1EED6BE200038D83 /* BikeMapiOS.entitlements */,
 				3BA5D6C21EE3576100963138 /* AppDelegate.swift */,
-				3BA5D6C41EE3576100963138 /* ViewController.swift */,
 				3BA5D6C61EE3576100963138 /* Main.storyboard */,
 				3BA5D6C91EE3576100963138 /* Assets.xcassets */,
 				3BA5D6CB1EE3576100963138 /* LaunchScreen.storyboard */,
 				3BA5D6CE1EE3576100963138 /* Info.plist */,
+				F7D94CE61EEEB11E00D171FB /* TableViewClassTableViewController.swift */,
 			);
 			path = BikeMapiOS;
 			sourceTree = "<group>";
@@ -335,8 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA5D6C51EE3576100963138 /* ViewController.swift in Sources */,
 				3BA5D6C31EE3576100963138 /* AppDelegate.swift in Sources */,
+				F7D94CE71EEEB11E00D171FB /* TableViewClassTableViewController.swift in Sources */,
 				3BB4EC001EED79DC005A0199 /* ContractReply.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
