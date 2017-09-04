@@ -12,6 +12,10 @@ import AlamofireObjectMapper
 
 class TableViewClassTableViewController: UITableViewController {
     var items:[String] = []
+    @IBAction func cancel(_ sender: Any) {
+    }
+    @IBAction func cancelBtn(_ sender: UIBarButtonItem) {
+    }
     let cellReuseIdentifier = "cell"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +35,7 @@ class TableViewClassTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let url = URL(string: "https://feeds.citibikenyc.com/stations/stations.json") {
+        if let url = URL(string: "https://api.jcdecaux.com/vls/v1/contracts?apiKey=38440d36615d46c21c37e5e4cfb487f6a17c9e3c") {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
             
@@ -40,21 +44,19 @@ class TableViewClassTableViewController: UITableViewController {
             //urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
          
             
-            Alamofire.request(urlRequest).responseArray( keyPath: "stationBeanList",completionHandler: { (response: DataResponse<[ContractResponse]>) in
+            Alamofire.request(urlRequest).responseArray( keyPath: "",completionHandler: { (response: DataResponse<[Cont]>) in
                 let forecastArray = response.result.value
                 
      
                 
                 if let forecastArray = forecastArray {
                     for forecast in forecastArray {
-                        print(forecast.name ?? "")
+                        //print(forecast.name ?? "")
                         self.items.append(forecast.name!)
                         
                     }
                     
-                    for uu in self.items {
-                        print(uu, "")
-                    }
+                  
                     //reload the data
                     self.tableView.reloadData()
                    
@@ -87,6 +89,11 @@ class TableViewClassTableViewController: UITableViewController {
 
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("You selected cell number: \(self.items[indexPath.row])!")
+        self.performSegue(withIdentifier: "backMap", sender: self)
+    }
+  
     
 
     /*
@@ -124,14 +131,22 @@ class TableViewClassTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if (segue.identifier == "backMap") {
+            let nav = segue.destination as! UINavigationController
+            let vc = nav.topViewController as! ViewController
+            
+                 vc.city = self.items[(self.tableView.indexPathForSelectedRow?.row)!]
+                
+            
+        }
     }
-    */
+ 
 
 }
