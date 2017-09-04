@@ -14,6 +14,8 @@ class ContractResponse : Mappable{
     
     var name : String?
     var availableBikes : String?
+    var latitude : String?
+    var longitude : String?
 
     
     
@@ -26,6 +28,8 @@ class ContractResponse : Mappable{
     func mapping(map: Map) {
         name <- map["stationName"]
         availableBikes <- map["availableBikes"]
+        latitude <- map["latitude"]
+        longitude <- map["longitude"]
     }
     
 }

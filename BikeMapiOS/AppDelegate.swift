@@ -35,8 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Alamofire.request(urlRequest).responseArray( keyPath: "stationBeanList",completionHandler: { (response: DataResponse<[ContractResponse]>) in
                 let forecastArray = response.result.value
          
-                print(response.request)
-                print(response.result.error)
+  
                 if let forecastArray = forecastArray {
                     for forecast in forecastArray {
                        // print(forecast.name ?? "")
@@ -45,9 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         
                     }
                     
-                    for uu in self.item! {
-                       print(uu ?? "")
-                    }
+                   
                     
                     def.setValue(self.item, forKey: "ListStations")
                   
