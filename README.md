@@ -1,4 +1,4 @@
-# Bikes Map App
+# Bikes Map iOS App
 
 ## Bikes station information available for:
 - Paris
