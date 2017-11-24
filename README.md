@@ -72,4 +72,4 @@ Bikes Data:
 		"available_bike_stands": 12,
 		"available_bikes": 13,
 		"last_update": 1511545206000
-	}]```
+	}]
