@@ -37,6 +37,7 @@
 
 
 Bikes Data:
+``` https://api.jcdecaux.com/vls/v1/stations?apiKey={APi_KEY}&contract=paris
 
 ```[
 	{
