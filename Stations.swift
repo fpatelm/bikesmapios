@@ -13,8 +13,13 @@ import Alamofire
 class Stations : Mappable{
     var position : Position?
     var name : String?
+<<<<<<< HEAD
     var lat : String?
     var lng : String?
+=======
+    var lat : Double?
+    var lng : Double?
+>>>>>>> origin/master
 
     required init?(map: Map) {
         
@@ -29,8 +34,13 @@ class Stations : Mappable{
 }
 
 struct Position : Mappable{
+<<<<<<< HEAD
     var lat : String?
     var lng : String?
+=======
+    var lat : Double?
+    var lng : Double?
+>>>>>>> origin/master
     
     init?(map: Map) {
         

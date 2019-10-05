@@ -52,6 +52,10 @@
 		D915B20B8A8773B0D372B4C2 /* Pods-BikeMapiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeMapiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BikeMapiOS/Pods-BikeMapiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E12013B3E0E69E80B372C9D0 /* Pods-BikeMapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BikeMapiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-BikeMapiOS/Pods-BikeMapiOS.release.xcconfig"; sourceTree = "<group>"; };
 		F70DC16E1F5DBB9C00A38A8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		F78E950C1F62A43A00450C3A /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = SOURCE_ROOT; };
+>>>>>>> origin/master
 		F7A959C11F5DD7D700557DEA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F7A959C31F5ECC4A00557DEA /* Cont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cont.swift; sourceTree = "<group>"; };
 		F7A959C51F5F29DA00557DEA /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				F70DC16E1F5DBB9C00A38A8B /* ViewController.swift */,
 				3B71BEDE1EED6BE200038D83 /* BikeMapiOS.entitlements */,
 				3BA5D6C21EE3576100963138 /* AppDelegate.swift */,
+				F78E950C1F62A43A00450C3A /* logo.png */,
 				3BA5D6C61EE3576100963138 /* Main.storyboard */,
 				3BA5D6C91EE3576100963138 /* Assets.xcassets */,
 				3BA5D6CB1EE3576100963138 /* LaunchScreen.storyboard */,
@@ -228,7 +233,10 @@
 								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
 							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -510,8 +518,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HK8D4ZUZZ7;
 				INFOPLIST_FILE = BikeMapiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-fpatel.BikeMapiOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fpatel.BikeMapiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -525,8 +534,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HK8D4ZUZZ7;
 				INFOPLIST_FILE = BikeMapiOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.-fpatel.BikeMapiOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fpatel.BikeMapiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
